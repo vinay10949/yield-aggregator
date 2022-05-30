@@ -35,13 +35,14 @@ $ npm install
 ### 3. Start Ganache-cli
 In a separate CMD prompt/terminal run:
 ```
-$ ganache-cli -f https://mainnet.infura.io/v3/<Your-Project-ID> -m <Your-Mnemonic-Phrase> -u 0x9759A6Ac90977b93B58547b4A71c78317f391A28 -p 7545
+$ ganache-cli -f https://mainnet.infura.io/v3/<Your-Project-ID> -m <Your-Mnemonic-Phrase> -u 0x9759A6Ac90977b93B58547b4A71c78317f391A28 -p 8545
 ```
 
 Replace `Your-Project-ID` with your Infura Project ID located in the settings of your project.
 Replace `Your-Mnemonic-Phrase` with your own mnemonic phrase. If you don't have a mnemonic phrase to include you can omit it:
 ```
-$ ganache-cli -f https://mainnet.infura.io/v3/<Your-Project-ID> -u 0x9759A6Ac90977b93B58547b4A71c78317f391A28 -p 7545
+$ ganache --db db/ -f https://mainnet.infura.io/v3/<Your-Project-ID> -m "laugh topple voyage share reduce town year core all taste helmet mule"  --chain.chainId 1500 --unlock "0x5D38B4e4783E34e2301A2a36c39a03c45798C4dD"
+
 ```
 
 If you didn't include a mnemonic phrase, after starting the ganache server it will supply you with one, plus 10 accounts you can use,
